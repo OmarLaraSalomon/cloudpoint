@@ -1,0 +1,39 @@
+
+
+
+<section class="flex justify-center items-center ">
+    <div class="w-[97%] overflow-hidden">
+        <div class="carousel flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide">
+            <img src="imgs/Parade.png" alt="" class=" min-w-[400%] lg:min-w-[300%]  md:min-w-[300%] h-auto object-cover">
+            <img src="imgs/Parade.png" alt="" class=" min-w-[400%] lg:min-w-[300%] md:min-w-[300%] h-auto object-cover">
+        </div>
+    </div>
+</section>
+
+
+<style>
+
+    /* Ocultar scrollbar en todos los navegadores */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE y Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+</style>
+
+
+<script>
+    const carousel = document.querySelector('.carousel') as HTMLElement | null;
+
+if (carousel) {
+    carousel.addEventListener('wheel', (e: WheelEvent) => {
+        e.preventDefault(); // Previene el scroll vertical predeterminado
+        carousel.scrollLeft += e.deltaY; // Desplazamiento horizontal basado en el scroll vertical
+    });
+}
+
+</script>

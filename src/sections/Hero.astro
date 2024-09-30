@@ -1,0 +1,29 @@
+---
+import Carrousel from "@/components/Carrousel.astro"
+import Boton from "@/components/Boton.astro"
+import HeroImagen from "@/components/HeroImagen.astro"
+---
+
+<main class="w-full relative overflow-hidden h-auto">
+    <HeroImagen/>
+
+    <div class="absolute inset-x-0 bottom-[128px] md:bottom-[430px] lg:bottom-[430px] grid grid-cols-2 gap-y-1 lg:gap-y-10 md:gap-y-10 gap-x-2 md:gap-x-6 lg:gap-x-6 pr-20 lg:pr-40 md:pr-40">
+        <div class="col-span-1 h-4 text-base flex justify-end font-bold text-neutral-500 lg:text-4xl md:text-4xl">1</div>
+        <div class="col-span-1 h-4 text-base  text-white lg:text-4xl md:text-4xl">Computadora</div>
+        
+        <div class="col-span-1 h-4  text-base flex justify-end font-bold text-neutral-500 lg:text-4xl md:text-4xl">30</div>
+        <div class="col-span-1 h-4 text-base  text-white lg:text-4xl md:text-4xl">Usuarios</div>
+        
+        <div class="col-span-1 h-4 text-base  flex justify-end font-bold text-neutral-500 lg:text-4xl md:text-4xl">1,000</div>
+        <div class="col-span-1 h-4 text-base  text-white lg:text-4xl md:text-4xl">Posibilidades</div>
+    </div>
+
+
+    <div class="absolute bottom-[32px] lg:bottom-[170px] md:bottom-[170px]">
+        <Carrousel />
+    </div>
+
+    <div class="absolute right-[130px]  bottom-[8px]  md:right-[540px] lg:right-[540px] md:bottom-[110px] lg:bottom-[110px]">
+        <Boton />
+    </div>
+</main>
